@@ -9,9 +9,16 @@ pig.style.position = 'fixed';
 
 var mouseListener = function(event){mouseMoveFunc(event)}
 document.addEventListener('mousemove', mouseListener);
+spawnOrange();
 
 function mouseMoveFunc(event){
 	pig.style.left = event.clientX - 64 + 'px';
 	pig.style.top = event.clientY - 64 +'px';
 }
 
+// spawn orange
+
+function spawnOrange(){
+	orange.style.left = Math.random()*(window.innerWidth()-128) + 'px';
+	orange.style.top = Math.random()*(window.innerHeight() -128) + 'px';
+}
