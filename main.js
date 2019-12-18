@@ -7,6 +7,13 @@ document.getElementsByTagName("body")[0].insertAdjacentHTML('beforeEnd', '<img s
 var pig = getElementById('pig');
 pig.style.position = 'fixed';
 
+//работа со счетом
+document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd','<div id="scoreObj"></div>');
+var scoreObj = getElementById('scoreObj');
+scoreObj.style.textAlign = 'center';
+scoreObj.style.fontSize = 72+'pt';
+var score = 0;
+
 var mouseListener = function(event){mouseMoveFunc(event)}
 document.addEventListener('mousemove', mouseListener);
 spawnOrange();
