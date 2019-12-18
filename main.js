@@ -17,6 +17,7 @@ var score = 0;
 var mouseListener = function(event){mouseMoveFunc(event)}
 document.addEventListener('mousemove', mouseListener);
 spawnOrange();
+setScore(0);
 
 function mouseMoveFunc(event){
 	pig.style.left = event.clientX - 64 + 'px';
@@ -37,6 +38,10 @@ function checkCollision(){
 	if(Math.sqrt(Math.pow(pig.offsetLeft - orange.offsetLeft,2) + Math.pow(pig.offsetTop - orange.offsetTop, 2)) < 128){
 		spawnOrange();
 		score++;
-		setScore();
+		setScore(score);
 	}
+}
+
+function setScore(scoreToSet){
+	scoreObj.innerHTML = "Очки: "+scoreToSet;
 }
