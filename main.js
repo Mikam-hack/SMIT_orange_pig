@@ -4,3 +4,5 @@ orange.style.position = 'fixed';
 
 // работаем со свиньей
 document.getElementsByTagName("body")[0].insertAdjacentHTML('beforeEnd', '<img src="img/pig.png" id="pig">');
+var pig = getElementById('pig');
+pig.style.position = 'fixed';
